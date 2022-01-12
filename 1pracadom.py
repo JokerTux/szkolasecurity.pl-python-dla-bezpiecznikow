@@ -11,6 +11,7 @@ Lista po tych przekształceniach powinna wyglądać tak: [0, 1, 2, 4, 6, 7, '8�
 
 lista = []
 
+
 #Twory liste 0-10
 for i in range(10):
     lista.append(i)
@@ -24,12 +25,11 @@ for l in lista:
 for a in lista:
     if a == 8:
         lista.remove(a)
+        lista.append("8")
 for b in lista:
     if b == 9:
         lista.remove(b)
-
-lista.append("8")
-lista.append("9")
+        lista.append("9")
 
 # Wersja "reczna"
 #lista[6] = "8"
