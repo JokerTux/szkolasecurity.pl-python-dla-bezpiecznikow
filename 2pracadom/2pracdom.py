@@ -22,11 +22,7 @@ if __name__ == '__main__':
 				if user:
 					print(path)
 				if admin:
-					print(path)	
-
-				
-
-		
+					print(path)			
 		
 	PhpFilter()			
 
