@@ -5,7 +5,7 @@ if __name__ == '__main__':
 		# Open 'fuff.log' and read the file
 		with open('ffuf.log', 'r') as infile:		
 			logs = infile.read()
-			# Splits for a better view
+			# Splits for a better look
 			for log in logs.split('\n'):
 				log = log.replace(',', ' ')
 				log_split = log.split(' ')
