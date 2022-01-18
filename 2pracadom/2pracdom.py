@@ -15,6 +15,8 @@ if __name__ == '__main__':
 				size = log_split[5]
 				
 				#print(f'{path}|{status_code}|{size}')
+				
+				#Filters only the path of user.php & admin.php files. 
 				user = re.search('user.php$', path)
 				admin = re.search('admin.php$', path)
 
