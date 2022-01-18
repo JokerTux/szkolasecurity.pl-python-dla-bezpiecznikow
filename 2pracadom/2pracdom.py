@@ -16,7 +16,7 @@ if __name__ == '__main__':
 				
 				#print(f'{path}|{status_code}|{size}')
 				
-				
+				#Searching for filenames				
 				user = re.search('user.php$', path)
 				admin = re.search('admin.php$', path)
 
