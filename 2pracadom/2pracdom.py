@@ -16,7 +16,7 @@ if __name__ == '__main__':
 				
 				#print(f'{path}|{status_code}|{size}')
 				
-				#Filters only the filenames user.php & admin.php and print their path. 
+				
 				user = re.search('user.php$', path)
 				admin = re.search('admin.php$', path)
 
