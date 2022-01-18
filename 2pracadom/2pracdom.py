@@ -23,8 +23,11 @@ if __name__ == '__main__':
 					print(path)
 				if admin:
 					print(path)			
-		
-	PhpFilter()			
+			
+	try:	
+		PhpFilter()
+	except:
+		print("oooops something went wrong...")			
 
 
 
