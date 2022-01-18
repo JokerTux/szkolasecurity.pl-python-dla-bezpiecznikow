@@ -13,14 +13,12 @@ if __name__ == '__main__':
 				path = log_split[0]
 				status_code = log_split[2]
 				size = log_split[5]
-				
 				#print(f'{path}|{status_code}|{size}')
 				
 				#Searching for filenames				
 				user = re.search('user.php$', path)
 				admin = re.search('admin.php$', path)
 
-				# Whats a better way to write this 4 lines ?
 				if user:
 					print(path)
 				if admin:
