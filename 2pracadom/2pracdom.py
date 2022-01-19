@@ -16,16 +16,16 @@ if __name__ == '__main__':
 				#print(f'{path}|{status_code}|{size}')
 				
 				#Searching for filenames				
-				user = re.search('user.php$', path)
-				admin = re.search('admin.php$', path)
-				#Thank you Grzegorz Niedziela for the solution :)!
-				if user or admin:
-   					print(path)			
-			
+				keyword = re.search('/[^/]*(admin|user)[^/]*\.php$', path)
+				try:
+					if keyword:
+						print(path)
+				except:
+					print("Nothing found")			
 	try:	
 		PhpFilter()
 	except:
-		print("oooops something went wrong...")			
+		print("oooops something went wrong...")		
 
 
 
