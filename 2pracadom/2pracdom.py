@@ -18,11 +18,9 @@ if __name__ == '__main__':
 				#Searching for filenames				
 				user = re.search('user.php$', path)
 				admin = re.search('admin.php$', path)
-
-				if user:
-					print(path)
-				if admin:
-					print(path)			
+				#Thank you Grzegorz Niedziela for the solution :)!
+				if user or admin:
+   					print(path)			
 			
 	try:	
 		PhpFilter()
