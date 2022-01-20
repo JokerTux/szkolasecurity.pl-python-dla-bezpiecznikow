@@ -16,7 +16,7 @@ if __name__ == '__main__':
 				#print(f'{path}|{status_code}|{size}')
 				
 				#Searching for filenames				
-				keyword = re.search('/[^/]*(admin|user)[^/]*\.php$', path)
+				keyword = re.search('/*(admin|user)[^/]*\.php$', path)
 				try:
 					if keyword:
 						print(path)
@@ -25,18 +25,5 @@ if __name__ == '__main__':
 	try:	
 		PhpFilter()
 	except:
-		print("oooops something went wrong...")		
-
-
-
-
-
-
-
-
-
-	
+		print("oooops something went wrong...")			
 		
-
-		
-			
