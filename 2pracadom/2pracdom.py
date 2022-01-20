@@ -1,3 +1,11 @@
+'''
+Praca domowa:
+
+Napisz skrypt, przefiltruje plik ffuf.out i zostawi jedynie ściezki z rozszerzeniem .php,
+w których nazwie pliku (nie folderu) znajduje się słowo „admin” lub „user”
+
+'''
+
 import re
 
 if __name__ == '__main__':
@@ -26,4 +34,3 @@ if __name__ == '__main__':
 		PhpFilter()
 	except:
 		print("oooops something went wrong...")			
-		
