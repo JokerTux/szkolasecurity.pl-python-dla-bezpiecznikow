@@ -32,7 +32,6 @@ def Pln_to_chf():
 	read = json.dumps(resp)
 	print(json.loads(read)['conversion_rates']['PLN'])
 
-
 def Pln_to_usd():
 	resp = requests.get('https://v6.exchangerate-api.com/v6/193c8f8b3c7a3a10179f0652/latest/USD').json()
 	read = json.dumps(resp)
