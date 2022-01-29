@@ -8,7 +8,7 @@ Przykład: najczęściej wygrywający kierowca formuły 1 w ciągu ostatnich dw�
 
 Fail ! Api ktore wybralem bylo w postaci JSON`a ,dlugo zajelo mi zrozumienie
 ,ze BS bedzie zlym parserem JSON`a ale napisalem do ludzi na forum polskiego pythona:
-'https://pl.python.org/forum/index.php?topic=12815.0' ktorzy szybko mnie z bledu wyciagneli.
+'https://pl.python.org/forum/index.php?topic=12815.0' ktorzy mnie dopiero z bledu wyciagneli.
 
 Nauczylem sie czegos nowego , wiem cos wiecej na temat parsowania Jsona 
 "Fail nie jest taki zly jak go maluja ;)! "
