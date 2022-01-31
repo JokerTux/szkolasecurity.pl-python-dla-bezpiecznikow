@@ -12,14 +12,14 @@ from selenium import webdriver
 from time import sleep
 from termcolor import colored
 
-def Check_updates():
+def check_updates():
 	with open('info.txt') as outfile:
 		if first_event_title.text in outfile.read():
 			print (colored('No new events', 'blue'))
 		else:
 			print (colored('New event !!', 'red'))	
 
-def Save_info():
+def save_info():
 	with open('info.txt', 'w') as outfile:
 		info = outfile.write(f'{first_event_title.text}, {first_event_date.text}')
 		
@@ -43,12 +43,12 @@ if __name__ == '__main__':
 		first_event_date = dates[0]
 		second_event_date = dates[1]
 
-		Check_updates()
+		check_updates()
 
 		print(f'1st event: "{first_event_title.text}", {first_event_date.text}')
 		print(f'2nd event: "{second_event_title.text}", {second_event_date.text}')
 		
-		Save_info()
+		save_info()
 
 		# titles = driver.find_elements_by_tag_name('h3')
 
