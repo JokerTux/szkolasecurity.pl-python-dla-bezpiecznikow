@@ -91,7 +91,7 @@ def login_page():
                 <button type="submit">Login</button>   
                 <input type="checkbox" checked="checked"> Remember me   
                 <button type="button" class="cancelbtn"> Cancel</button>   
-                Forgot <a href="https://www.techadvisor.com/how-to/security/how-use-password-manager-3787399/"> password? </a>   
+                Forgot <a href="https://www.youtube.com/watch?v=GyuVLIbmI5U"> password? </a>   
             </div>   
         </form>     
     </body>     
