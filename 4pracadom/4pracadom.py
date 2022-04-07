@@ -111,13 +111,14 @@ def login_page():
 	'''
 @app.route('/login', methods=['POST'])
 def login():
-	login = request.form.get('login')
-	password = request.form.get('password')
-	user = User.query.filter_by(login=login, password=password).first()
+    agent = request.headers.get('User-Agent')
+    login = request.form.get('login')
+    password = request.form.get('password')
+    user = User.query.filter_by(login=login, password=password).first()
 
-	if user:
-		return f'{user.login} is logged in'
-	return 'Invalid credentials'
+    if user:
+        return f'{user.login} is logged in, {agent}'
+    return 'Invalid credentials'
 
 
 @app.route('/register', methods=['GET'])
