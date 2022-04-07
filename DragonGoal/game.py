@@ -88,7 +88,7 @@ def collision():
 
 pygame.init()
 
-#Extra event with a new Timer for the respawn of "UI"
+#Extra event with a new Timer for the respawn of enemys (Obstacle)
 obstacle_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(obstacle_timer,randint(1500,2500))
 
