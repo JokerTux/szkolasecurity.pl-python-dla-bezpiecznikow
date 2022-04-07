@@ -1,3 +1,15 @@
+'''
+Praca domowa nr.4 
+Kurs : https://szkolasecurity.pl/python-dla-bezpiecznikow/
+Prowadzacy : Grzegorz Niedziela
+
+Dodaj do serwera podstawową możliwość rejestracji. Wystarczy login i hasło – nie musisz (ale możesz) narzucać polityki haseł, długości loginu, itp.
+W tym celu musisz:
+1. Dodać nowy kontroler, który pobierze dane od użytkownika i zapisze je w bazie.
+2. Dodać nowy formularz, który będzie przesyłał dane do tego widoku.
+
+'''
+
 from flask import Flask, request , redirect
 from flask_sqlalchemy import SQLAlchemy
 import time
