@@ -1,3 +1,9 @@
+'''
+My project is based on a tutorial from youtube. 
+Link : https://www.youtube.com/watch?v=AY9MnQ4x3zk
+Channel name : Clear Code
+'''
+
 import pygame
 from sys import exit
 from random import randint, choice
