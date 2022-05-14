@@ -1,9 +1,3 @@
-'''
-My project is based on a tutorial from youtube. 
-Link : https://www.youtube.com/watch?v=AY9MnQ4x3zk
-Channel name : Clear Code
-'''
-
 import pygame
 from sys import exit
 from random import randint, choice
@@ -78,7 +72,13 @@ class Obstacle(pygame.sprite.Sprite):
 		self.rect.x -= 5.5
 		self.kill_monsters()
 
-
+def display_score():
+	current_time = int(pygame.time.get_ticks()/1000) - start_time 
+	score_surf = font.render(f'{current_time}',True,(64,64,64))
+	score_rect = score_surf.get_rect(center=(500,50))
+	screen.blit(score_surf,score_rect)
+	return current_time
+	
 def collision():
 	if pygame.sprite.spritecollide(player.sprite,obstacle_group,False):
 		obstacle_group.empty()
@@ -88,7 +88,11 @@ def collision():
 
 pygame.init()
 
-#Extra event with a new Timer for the respawn of enemys (Obstacle)
+font = pygame.font.Font(None,80)
+score = 0 
+start_time = 0
+
+#Extra event with a new Timer for the respawn of "UI"
 obstacle_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(obstacle_timer,randint(1500,2500))
 
@@ -134,12 +138,27 @@ while True:
 		obstacle_group.update()
 
 		game_active = collision()
-	
+		score = display_score()
 	else:
-		screen.fill('Blue')	
+		screen.fill('Blue')
+		welcome = "Press space to start the game"
+		welcome_msg = font.render(welcome,True,(64,64,64))
+		welcome_rect = welcome_msg.get_rect(center=(500,50))
+
+		score_msg = font.render(f'Your score:{score}',True,(255,100,100))
+		score_msg_rec =score_msg.get_rect(center=(450,50)) 
+		
+		if score == 0:
+			screen.blit(welcome_msg,welcome_rect)	
+		else:
+			screen.blit(score_msg,score_msg_rec)
+
+
 		keys = pygame.key.get_pressed()
 		if keys[pygame.K_SPACE]:
 			game_active = True
+			start_time = int(pygame.time.get_ticks()/1000) - start_time
+
 	
 	
 
